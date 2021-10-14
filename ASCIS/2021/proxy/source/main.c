@@ -142,7 +142,7 @@ void open_connection(struct cross_thread_request * r)
     if(nb > r->size)
     {
     	free(buf);
-    	buf==malloc(nb);
+    	buf=malloc(nb);
     	r->size=nb;
     }
     memcpy(buf,tmp,nb);
