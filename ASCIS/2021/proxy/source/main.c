@@ -243,6 +243,7 @@ void __attribute__ ((noinline)) create_request()
 	if (size>0x1000 || size==0)
 	{
 		printf("Your size is invalid");
+		free(host);
 		return;
 	}
 		
@@ -364,7 +365,7 @@ void __attribute__ ((noinline)) menu()
 }
 void __attribute__ ((noinline)) credit()
 {
-	puts("This unpwnable service maded by z3r09");
+	puts("This unpwnable service made by z3r09!!");
 }
 void __attribute__ ((noinline)) clean()
 {
