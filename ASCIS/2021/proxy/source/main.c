@@ -325,6 +325,11 @@ void __attribute__ ((noinline)) delete_request()
 		printf("Request not found !\n");
 		return;
 	}
+	if (thread_request[idx]->status==CONNECTED)
+	{
+		printf("Request is executing, can't delete !\n");
+		return;
+	}
 	struct cross_thread_request * r =thread_request[idx];
 	free(r->host);
 	free(r->buffer);
