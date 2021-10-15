@@ -20,8 +20,8 @@ RUN mkdir /home/ctf/dev && \
 RUN mkdir /home/ctf/bin && \
     cp /bin/sh /home/ctf/bin && \
     cp /bin/ls /home/ctf/bin && \
-    cp /bin/cat /home/ctf/bin
-
+    cp /bin/cat /home/ctf/bin && \
+    cp /bin/timeout /home/ctf/bin
 COPY ./ctf.xinetd /etc/xinetd.d/ctf
 COPY ./start.sh /start.sh
 RUN echo "Blocked by ctf_xinetd" > /etc/banner_fail
