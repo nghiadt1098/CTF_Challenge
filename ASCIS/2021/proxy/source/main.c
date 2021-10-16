@@ -19,6 +19,8 @@
 #include <pthread.h>
 #define MAX_CAPACITY 4
 
+// TODO : Add mutex and make it thread safe.
+
 enum request_status
 {
 	PENDING=0,
